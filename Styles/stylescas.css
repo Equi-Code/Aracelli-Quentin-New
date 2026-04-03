@@ -90,16 +90,18 @@ nav a:hover {
 .nav-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     opacity: 0;
-    pointer-events: none; /* 👈 clave */
+    pointer-events: none;
+    /* 👈 clave */
     transition: opacity 0.3s;
     z-index: 5;
 }
 
 .nav-overlay.active {
     opacity: 1;
-    pointer-events: all; /* 👈 solo cuando está activo */
+    pointer-events: all;
+    /* 👈 solo cuando está activo */
 }
 
 
@@ -364,9 +366,9 @@ nav a:hover {
     margin-bottom: 20px;
     opacity: 0;
     animation: fadeUp 1s 0.3s forwards;
-    background: rgba(253, 250, 246, 0.82);
+    /* background: rgba(253, 250, 246, 0.82); */
     padding: 6px 20px;
-    backdrop-filter: blur(4px);
+    /* backdrop-filter: blur(4px); */
 }
 
 .hero h1 {
@@ -702,6 +704,34 @@ section {
     z-index: 2;
 }
 
+/* LEFT side content (odd items) */
+.dia-left {
+    text-align: end;
+    padding-right: 28px;
+    padding-bottom: 8px;
+}
+
+.dia-left .dia-illustration {
+    justify-self: end;
+    align-items: center;
+}
+
+
+
+/* RIGHT side content (even items) */
+.dia-right {
+    text-align: start;
+    padding-left: 28px;
+    padding-bottom: 8px;
+}
+
+.dia-right .dia-illustration {
+    justify-self: start;
+    align-items: center;
+}
+
+
+
 /* Contenido base */
 .dia-content {
     max-width: 320px;
@@ -761,6 +791,7 @@ section {
     font-size: 15px;
     letter-spacing: 1px;
 }
+
 /* ── ALOJAMIENTO ── */
 #alojamiento {
     background: var(--ivory);
@@ -893,6 +924,128 @@ section {
 }
 
 /* ── RSVP ── */
+/* #rsvp {
+    background: var(--ivory);
+}
+
+.rsvp-deadline {
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--muted);
+}
+
+.rsvp-wrap {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.form-iframe-wrap {
+    position: relative;
+    border: 1px solid rgba(184, 150, 58, 0.3);
+    background: var(--ivory);
+    overflow: hidden;
+}
+
+.form-iframe-wrap iframe {
+    display: block;
+    min-height: 900px;
+}
+
+.form-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 48px 32px;
+    background: var(--ivory);
+}
+
+.form-placeholder.hidden {
+    display: none;
+}
+
+.placeholder-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.placeholder-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.placeholder-sub {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 420px;
+    margin-bottom: 32px;
+}
+
+.placeholder-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--cream);
+    border: 1px solid rgba(184, 150, 58, 0.25);
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.4;
+}
+
+.step-num {
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    background: var(--navy);
+    color: var(--cream);
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* ── RSVP ── */
+.btn-rsvp-direct {
+    display: inline-block;
+    padding: 14px 36px;
+    background: var(--navy);
+    color: var(--cream);
+    text-decoration: none;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 300;
+    border: 1px solid var(--navy);
+    transition: all 0.3s;
+}
+
+.btn-rsvp-direct:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+}
+
 #rsvp {
     background: var(--ivory);
 }
@@ -1094,6 +1247,35 @@ section {
 }
 
 /* ── FOOTER ── */
+
+.footer-instagram {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 24px;
+    color: var(--gold-light);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: 1px solid rgba(184, 150, 58, 0.35);
+    padding: 10px 24px;
+    transition: all 0.3s;
+}
+
+.footer-instagram:hover {
+    background: rgba(184, 150, 58, 0.12);
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.footer-instagram svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
 footer {
     background: var(--navy);
     border-top: 1px solid rgba(184, 150, 58, 0.2);

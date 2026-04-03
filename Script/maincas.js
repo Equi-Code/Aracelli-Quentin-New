@@ -17,6 +17,26 @@ function closeNav() {
 }
 
 // ── LANG ──
+// let currentLang = 'es';
+// function setLang(lang) {
+//   currentLang = lang;
+//   document.querySelectorAll('[data-lang]').forEach(el => {
+//     el.classList.toggle('active', el.dataset.lang === lang);
+//   });
+//   document.querySelectorAll('.lang-btn').forEach(btn => {
+//     btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+//   });
+//   document.documentElement.lang = lang;
+//   closeNav();
+//   // Switch iframe src
+//   const iframe = document.getElementById('google-form-iframe');
+//   if (iframe) {
+//     const url = iframe.dataset['src' + lang.charAt(0).toUpperCase() + lang.slice(1)];
+//     if (url && !url.includes('PEGAR')) iframe.src = url;
+//   }
+// }
+
+// ── LANG ──
 let currentLang = 'es';
 function setLang(lang) {
   currentLang = lang;
@@ -28,6 +48,13 @@ function setLang(lang) {
   });
   document.documentElement.lang = lang;
   closeNav();
+  // Switch RSVP direct button URL based on language
+  const rsvpBtn = document.getElementById('rsvp-btn');
+  if (rsvpBtn) {
+    const urlEs = 'https://docs.google.com/forms/d/e/1FAIpQLSdATgeY3Qr8Zw4-WAM2NY3GhG-tIvoZIYyUzRNrLvsIjxuWKw/viewform?usp=header';
+    const urlFr = 'https://docs.google.com/forms/d/e/1FAIpQLSexAZZwyqaH6lUEGDIhoIgKUyu-4uOkMLlwlTyOpHz0KdSojw/viewform?usp=header';
+    rsvpBtn.href = lang === 'fr' ? urlFr : urlEs;
+  }
   // Switch iframe src
   const iframe = document.getElementById('google-form-iframe');
   if (iframe) {
