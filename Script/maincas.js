@@ -52,7 +52,7 @@ function setLang(lang) {
   const rsvpBtn = document.getElementById('rsvp-btn');
   if (rsvpBtn) {
     const urlEs = 'https://docs.google.com/forms/d/e/1FAIpQLSdATgeY3Qr8Zw4-WAM2NY3GhG-tIvoZIYyUzRNrLvsIjxuWKw/viewform?usp=header';
-    const urlFr = 'https://docs.google.com/forms/d/e/1FAIpQLSexAZZwyqaH6lUEGDIhoIgKUyu-4uOkMLlwlTyOpHz0KdSojw/viewform?usp=header';
+    const urlFr = 'https://docs.google.com/forms/d/e/1FAIpQLSfWclELNxxovN8gNN2INIQnszEjlcb9RGQ4APuLjdmneK8vag/viewform?usp=header';
     rsvpBtn.href = lang === 'fr' ? urlFr : urlEs;
   }
   // Switch iframe src

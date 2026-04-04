@@ -1298,6 +1298,13 @@ footer p {
     text-transform: uppercase;
 }
 
+.footer-divider {
+    width: 1px;
+    height: 32px;
+    background: linear-gradient(to bottom, transparent, rgba(184, 150, 58, 0.3), transparent);
+    margin: 28px auto;
+}
+
 /* ── ANIMATIONS ── */
 @keyframes fadeUp {
     from {
@@ -1364,6 +1371,7 @@ a[data-lang].active {
     }
 
     .dia-timeline::before {
+
         left: 24px;
         /* mueve la línea a la izquierda */
         transform: none;
@@ -1395,6 +1403,29 @@ a[data-lang].active {
         padding: 0;
         margin-bottom: 8px;
     }
+
+    .dia-time {
+        grid-column: 1;
+        grid-row: 1;
+        font-size: 15px;
+        display: flex;
+        text-align: end;
+        /* padding-left: 5px; */
+        /* padding-top: 2px; */
+        margin-bottom: 0;
+        align-self: flex-start;
+    }
+
+    .dia-left,
+    .dia-right {
+        grid-column: 2;
+        grid-row: 2;
+        text-align: center !important;
+        padding-left: 10px !important;
+        padding-right: 0 !important;
+        padding-top: 10px;
+    }
+
 
     .regalo-cards {
         grid-template-columns: 1fr;
@@ -1495,4 +1526,39 @@ a[data-lang].active {
     letter-spacing: 8px;
     opacity: 0.7;
     white-space: nowrap;
+}
+
+/* ── ORNAMENTO FLORAL EN CADA SECCIÓN ── */
+#eldia,
+#rsvp,
+#regalos,
+#alojamiento {
+    position: relative;
+}
+
+#eldia::after,
+#rsvp::after,
+#regalos::after,
+#alojamiento::after {
+    content: '❀ ✿ ❀ ✿ ❀';
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    letter-spacing: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+/* Secciones claras (cream/ivory) → dorado suave */
+#eldia::after,
+#rsvp::after,
+#alojamiento::after {
+    color: rgba(184, 150, 58, 0.28);
+}
+
+/* Secciones oscuras (navy) → más visible */
+#regalos::after {
+    color: rgba(184, 150, 58, 0.35);
 }

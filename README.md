@@ -9,7 +9,7 @@ Hosteado en [Netlify](https://netlify.com).
 ## 🌐 URL del sitio
 
 ```
-https://araceliyquentin.netlify.app
+https://aracelliyquentin.netlify.app
 ```
 
 ---
@@ -32,11 +32,10 @@ https://araceliyquentin.netlify.app
 |---|---|
 | **Hero** | Nombres, frase de bienvenida y fecha |
 | **Cuenta regresiva** | Días, horas, minutos y segundos en tiempo real |
-| **Su historia** | Línea de tiempo de la pareja |
-| **Programa** | Cronograma del día (ceremonia, cocktail, fiesta) |
-| **Lugar** | Direcciones con links a Google Maps |
+| **El gran dia** | Cronograma del día (ceremonia, cocktail, fiesta) |
 | **RSVP** | Formulario de confirmación vía Google Forms embebido |
 | **Regalos** | IBAN y BIC para transferencia |
+| **Alojamientos recomendados** | Alojamientos recomendados |
 
 ---
 
@@ -45,6 +44,8 @@ https://araceliyquentin.netlify.app
 La página tiene un botón **ES / FR** fijo en la esquina superior derecha que cambia todo el contenido al idioma seleccionado, incluyendo el formulario RSVP.
 
 Para agregar el form en francés cuando esté listo, buscá esta línea en `index.html`:
+
+Ademas se agrego un Boton para ir directo al formulario.
 
 ```html
 <iframe
@@ -150,11 +151,11 @@ Netlify detecta el push y despliega automáticamente.
 | Qué cambiar | Dónde buscarlo en el HTML |
 |---|---|
 | Nombres / fecha | Sección `<!-- ══ HERO ══ -->` |
-| Historia de la pareja | Sección `<!-- ══ HISTORIA ══ -->` |
 | Horarios | Sección `<!-- ══ CRONOGRAMA ══ -->` |
 | Direcciones | Sección `<!-- ══ LUGAR ══ -->` |
 | URL del Google Form | Atributo `src` del `<iframe>` en sección RSVP |
 | IBAN / BIC | Sección `<!-- ══ REGALOS ══ -->` |
+| Alojamietos recomendados | Sección `<!-- ══ ALOJAMIENTOS RECOMENDADOS ══ -->` |
 | Fecha de la cuenta regresiva | `const weddingDate = new Date('2026-08-22T16:30:00')` en el JS |
 | Fecha límite RSVP | Texto dentro de `.rsvp-deadline` |
 
@@ -174,13 +175,13 @@ Netlify detecta el push y despliega automáticamente.
 
 ### Español
 > ¡Hola! 👋 ¿Ya pudiste confirmar tu asistencia a nuestro casamiento? 💍
-> Recordá que esperamos tu respuesta antes del **2 de mayo de 2026** en: araceliyquentin.netlify.app
+> Recordá que esperamos tu respuesta antes del **20 de junio de 2026** en: araceliyquentin.netlify.app
 > 📍 Ceremonia el 22 de agosto en Ailly-sur-Somme y fiesta en el Royal Picardie, Albert.
 > Si no podés venir, avisanos por acá 🙏 ¡Muchas gracias! 🌸 **Ara & Quentin** 🤵🏻‍♂️👰🏻‍♀️
 
 ### Français
 > Bonjour ! 👋 Avez-vous déjà confirmé votre présence à notre mariage ? 💍
-> Pensez à répondre avant le **2 mai 2026** sur : araceliyquentin.netlify.app
+> Pensez à répondre avant le **20 juin 2026** sur : araceliyquentin.netlify.app
 > 📍 Cérémonie le 22 août à Ailly-sur-Somme et fête au Royal Picardie, Albert.
 > Si vous ne pouvez pas venir, un message ici suffit 🙏 Merci beaucoup ! 🌸 **Ara & Quentin** 🤵🏻‍♂️👰🏻‍♀️
 
